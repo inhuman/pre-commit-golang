@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 FILES=$(go list ./...  | grep -v /vendor/)
 
-go test -timeout 30s -short -v ${FILES}
+/usr/local/go/bin/go test -timeout 30s -short -v ${FILES}
 
 returncode=$?
 if [ $returncode -ne 0 ]; then
