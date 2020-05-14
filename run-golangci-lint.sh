@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-
-env | grep PATH
-
+PATH=/usr/local/go/bin:$PATH
 /usr/local/bin/golangci-lint run "$@"
