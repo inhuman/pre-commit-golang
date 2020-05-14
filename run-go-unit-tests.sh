@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-FILES=$(go list ./...  | grep -v /vendor/)
+FILES=$(/usr/local/go/bin/go list ./...  | grep -v /vendor/)
 
 /usr/local/go/bin/go test -timeout 30s -short -v ${FILES}
 
