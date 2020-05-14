@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-FILES=$(go list ./...  | grep -v /vendor/)
-exec go build $FILES
+FILES=$(/usr/local/go/bin/go list ./...  | grep -v /vendor/)
+exec /usr/local/go/bin/go build $FILES
